@@ -42,13 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
       });
     });
   }
-
-@override
-  void initState() {
-    // TODO: implement initState
-  _getCarList();
-    super.initState();
-  }
   Future<CarBrand> _getBrandsList(String newValue) async {
     List<CarBrand> brand = [];
     for (var element in _carlist) {
@@ -67,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
         });
       }
     }
+  }
+@override
+  void initState() {
+    // TODO: implement initState
+  _getCarList();
+    super.initState();
   }
   @override
   Widget build(BuildContext context) {
@@ -170,5 +169,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
 }
